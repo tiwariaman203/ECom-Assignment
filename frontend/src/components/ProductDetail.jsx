@@ -11,7 +11,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     // Fetch product by ID from API
-    axios.get(`http://localhost:5000/products/${id}`)
+    axios.get(`https://ecom-assignment.onrender.com/products/${id}`)
       .then(response => {
         setProduct(response.data);
         setLoading(false);
