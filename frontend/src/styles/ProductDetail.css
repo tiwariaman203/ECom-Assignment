@@ -1,0 +1,40 @@
+/* Base styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Product detail styles */
+  .product-detail {
+    display: flex; /* Allow flexbox for responsive layout */
+    flex-direction: column; /* Stack elements vertically by default */
+    padding: 20px;
+  }
+  
+  .product-detail img {
+    width: 100%; /* Image takes full width on small screens */
+    max-width: 500px; /* Limit image width on larger screens */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Spacing after image */
+  }
+  
+  .product-info {
+    flex: 1; /* Flexible growth to fill remaining space */
+  }
+  
+  /* Responsive layout adjustments */
+  @media (max-width: 768px) {
+    .product-detail {
+      flex-direction: row; /* Switch to row layout on smaller screens */
+      flex-wrap: wrap; /* Wrap elements if needed */
+    }
+  
+    .product-info {
+      flex: initial; /* Remove flex growth for better layout */
+    }
+  
+    .product-detail img {
+      margin-right: 20px; /* Spacing between image and info on small screens */
+    }
+  }
