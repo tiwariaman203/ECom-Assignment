@@ -10,7 +10,7 @@ const ProductList = () => {
 
   useEffect(() => {
     // Fetch products from API
-    axios.get('http://localhost:5000/products')
+    axios.get('https://ecom-assignment.onrender.com/products')
       .then(response => {
         setProducts(response.data);
         setLoading(false);
